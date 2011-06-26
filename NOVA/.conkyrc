@@ -78,6 +78,11 @@ ${color black} Root $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
 $hr
 ${color black}Networking:
  Up:$color ${upspeed eth0} ${color black} - Down:$color ${downspeed eth0}
+$hr
+MPD:
+ $mpd_smart
+ $mpd_album
+ $mpd_status $mpd_elapsed/$mpd_length
 #$hr
 #${color black}Name           	CPU%		 MEM%
 #${color black} ${top name 1} 	${top cpu 1} 	${top mem 1}
