@@ -1,0 +1,25 @@
+BEAST - Dell PowerEdge 2500 Server
+
+Hardware Specs / System Specs see files 'lshw' and 'hwinfo'
+
+Archey:
+
+               +                
+               #                
+              ###               
+             #####              
+             ######             
+            ; #####;            User: 
+           +##.#####            Hostname: BEAST
+          +##########           Distro: Arch Linux
+         #############;         Kernel: 2.6.39-ARCH
+        ###############+        Uptime: 
+       #######   #######        Window Manager: 
+     .######;     ;###;`".      Desktop Environment: 
+    .#######;     ;#####.       Shell: /bin/bash
+    #########.   .########`     Terminal: xterm
+   ######'           '######    Packages: 362
+  ;####                 ####;   CPU: Pentium III (Coppermine)
+  ##'                     '##   RAM: 411 MB / 1257 MB 
+ #'                         `#  Disk: 22G / 67G
+
