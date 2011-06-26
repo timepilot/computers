@@ -350,7 +350,7 @@ mytextclock = awful.widget.textclock({ align = "right" }, "%H:%M:%S ", 1)
 mytextdate = awful.widget.textclock({ align = "right"}, "%a, %Y/%m/%d", 1)
 
 -- CALENDAR --
-cal.register(mytextdate, "<b>%s</b>") -- Added Calendar tooltip to date, bolded day
+cal.register(mytextdate, "<b><u>%s</u></b>") -- Added Calendar tooltip to date, bolded day & underlined day
 
 -- SYSTRAY --
 mysystray = widget({ type = "systray" })
