@@ -13,6 +13,7 @@ require("vicious")			-- Dynamic Widget Library
 require("lib/cal")				-- Calendar Library / Widget
 
 -- -- APP AUTOSTART -- --
+awful.util.spawn_with_shell("conky")
 awful.util.spawn_with_shell("dropboxd")
 awful.util.spawn_with_shell("mpd")
 awful.util.spawn_with_shell("/usr/lib/vino/vino-server --sm-disable")
