@@ -69,7 +69,6 @@ end
 -- -- MENU -- --
 
 myawesomemenu = {
-   { "Lock", "xscreensaver-command -lock" },
    { "Manual", terminal .. " -e man awesome" },
    { "Edit Config", editor_cmd .. " " .. awful.util.getdir("config") .. "/rc.lua" },
    { "Restart", awesome.restart },
@@ -81,6 +80,7 @@ myaccessoriesmenu = {
    { "Application Finder", "xfce4-appfinder" },
    { "Archive Manager", "file-roller" },
    { "Avant Window Navigator", "avant-window-navigator" },
+   { "ClamTK", "clamtk" },
    { "Disk Utility", "palimpsest" },
    { "DOSBOX Emulator", "dosbox" },
    { "gShot", "gshot" },
@@ -92,6 +92,7 @@ myaccessoriesmenu = {
    { "Orage Globaltime", "globaltime" },
    { "PCManFM File Manager", "pcmanfm" },
    { "Root Terminal", "gksu -l gnome-terminal" },
+   { "ROXTerm", "roxterm" },
    { "Sakura", "sakura" },
    { "Screenshot", "xfce4-screenshooter" },
    { "Sensor Viewer", "xfce4-sensors" },
@@ -159,7 +160,6 @@ mygraphicsmenu = {
    { "LXDE Image Viewer", "gpicview" },
    { "MCEdit", "python26 -O '/home/burchettm/Apps/MCEdit-linux/MCEditData/mcedit.pyo'" },
    { "MS Paint", "env WINEPREFIX='/home/burchettm/.wine' wine '/home/burchettm/.wine/drive_c/windows/mspaint.exe'" },
-   { "Ristretto Photo Viewer", "ristretto" }
 }
 
 myinternetmenu = {
@@ -170,6 +170,7 @@ myinternetmenu = {
    { "Deluge", "deluge-gtk" },
    { "Dropbox", "/opt/dropbox/dropboxd" },
    { "FileZilla", "filezilla" },
+   { "Firefox", "firefox" },
    { "Links", "xlinks -g" },
    { "Mangler", "mangler" },
    { "Midori", "midori" },
@@ -188,7 +189,8 @@ myinternetmenu = {
    { "Transmission", "transmission-gtk" },
    { "Turpial", "turpial" },
    { "TweetDeck", "adobe-air /opt/tweetdeck/tweetdeck.air" },
-   { "WhizNet", "env WINEPREFIX='/home/burchettm/.wineprefix/Whizkid' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/Whizkid/dosdevices/c:/users/Public/Start\\ Menu/Programs/Whizkid\\ Online/WhizNet/WhizNet.lnk" }
+   { "WhizNet", "env WINEPREFIX='/home/burchettm/.wineprefix/Whizkid' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/Whizkid/dosdevices/c:/users/Public/Start\\ Menu/Programs/Whizkid\\ Online/WhizNet/WhizNet.lnk" },
+   { "Wicd", "/usr/bin/wicd-client" }
 }
 
 myofficemenu = {
@@ -246,6 +248,7 @@ mysystemtoolsmenu = {
    { "Manage Printing", "/usr/bin/xdg-open http://localhost:631/" },
    { ".NET 1.1 Configuration", "env WINEPREFIX='/home/burchettm/.wineprefix/SOF' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/SOF/dosdevices/c:/users/burchettm/Start\\ Menu/Programs/Administrative\\ Tools/Microsoft\\ .NET\\ Framework\\ 1.1\\ Configuration.lnk" },
    { ".NET 1.1 Wizards", "env WINEPREFIX='/home/burchettm/.wineprefix/SOF' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/SOF/dosdevices/c:/users/burchettm/Start\\ Menu/Programs/Administrative\\ Tools/Microsoft\\ .NET\\ Framework\\ 1.1\\ Wizards.lnk" },
+   { "PkgBrowser", "pkgbrowser" },
    { "RXVT-Unicode", "urxvt" },
    { "Terminal", "terminal" },
    { "Thunar", "Thunar" },
@@ -366,7 +369,7 @@ myspacer.text = " | "
 
 -- VOLUME --
 volumewidget = widget ({ type = "textbox" })
-vicious.register( volumewidget, vicious.widgets.volume, " $2 $1%", 4, "Master")
+vicious.register( volumewidget, vicious.widgets.volume, " $2 $1%", 2, "Master")
 volumewidget:buttons(awful.util.table.join(
     awful.button({ }, 1, function () awful.util.spawn("amixer -q sset Master toggle", false) end),
     awful.button({ }, 3, function () awful.util.spawn("urxvt -e alsamixer", true) end),
