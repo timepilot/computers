@@ -16,6 +16,7 @@ require("lib/cal")				-- Calendar Library / Widget
 awful.util.spawn_with_shell("dropboxd")
 awful.util.spawn_with_shell("mpd")
 awful.util.spawn_with_shell("/usr/lib/vino/vino-server --sm-disable")
+awful.util.spawn_with_shell("/usr/bin/numlockx")
 awful.util.spawn_with_shell("wmname LG3D")
 
 -- DISABLE BUSY CURSOR WITH AWFUL.UTIL.SPAWN --
