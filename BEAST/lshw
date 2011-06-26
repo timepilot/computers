@@ -1,0 +1,376 @@
+beast
+    description: System
+    width: 32 bits
+    capabilities: smbios-2.3 dmi-2.3 smp-1.4 smp
+    configuration: boot=normal chassis=server cpus=2 uuid=44454C4C-42D9-1050-8033-C4C04F323131
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-firmware
+          description: BIOS
+          vendor: Winbond Electronics
+          physical id: 0
+          version: A04
+          date: 06/22/2001
+          size: 64KiB
+          capacity: 448KiB
+          capabilities: isa pci pnp upgrade shadowing escd cdboot bootselect edd int13floppytoshiba int13floppy360 int13floppy1200 int13floppy720 int5printscreen int9keyboard int14serial int17printer int10video acpi biosbootspecification netboot
+     *-cpu:0
+          description: CPU
+          product: Pentium III (Coppermine)
+          vendor: Intel Corp.
+          physical id: 400
+          bus info: cpu@0
+          version: 6.8.10
+          slot: Proc_1
+          size: 1GHz
+          capacity: 1533MHz
+          width: 32 bits
+          clock: 133MHz
+          capabilities: boot fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 mmx fxsr sse
+        *-cache:0
+             description: L1 cache
+             physical id: 700
+             size: 32KiB
+             capacity: 32KiB
+             capabilities: internal write-back
+        *-cache:1
+             description: L2 cache
+             physical id: 701
+             size: 256KiB
+             capacity: 2MiB
+             capabilities: pipeline-burst internal write-back unified
+     *-cpu:1
+          description: CPU
+          product: Pentium III (Coppermine)
+          vendor: Intel Corp.
+          physical id: 401
+          bus info: cpu@1
+          version: 6.8.10
+          slot: Proc_2
+          size: 1GHz
+          capacity: 1533MHz
+          width: 32 bits
+          clock: 133MHz
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 mmx fxsr sse
+        *-cache:0
+             description: L1 cache
+             physical id: 702
+             size: 32KiB
+             capacity: 32KiB
+             capabilities: internal write-back
+        *-cache:1
+             description: L2 cache
+             physical id: 703
+             size: 256KiB
+             capacity: 2MiB
+             capabilities: pipeline-burst internal write-back unified
+     *-memory
+          description: System Memory
+          physical id: 1000
+          slot: System board or motherboard
+          size: 1280MiB
+          capacity: 2GiB
+        *-bank:0
+             description: DIMM SDRAM Synchronous 133 MHz (7.5 ns)
+             physical id: 0
+             slot: DIMM_A
+             size: 256MiB
+             width: 64 bits
+             clock: 133MHz (7.5ns)
+        *-bank:1
+             description: DIMM SDRAM Synchronous 133 MHz (7.5 ns)
+             physical id: 1
+             slot: DIMM_B
+             size: 256MiB
+             width: 64 bits
+             clock: 133MHz (7.5ns)
+        *-bank:2
+             description: DIMM SDRAM Synchronous 133 MHz (7.5 ns)
+             physical id: 2
+             slot: DIMM_C
+             size: 256MiB
+             width: 64 bits
+             clock: 133MHz (7.5ns)
+        *-bank:3
+             description: DIMM SDRAM Synchronous 133 MHz (7.5 ns)
+             physical id: 3
+             slot: DIMM_D
+             size: 256MiB
+             width: 64 bits
+             clock: 133MHz (7.5ns)
+        *-bank:4
+             description: DIMM SDRAM Synchronous 133 MHz (7.5 ns)
+             physical id: 4
+             slot: DIMM_E
+             size: 128MiB
+             width: 64 bits
+             clock: 133MHz (7.5ns)
+        *-bank:5
+             description: DIMM SDRAM Synchronous 133 MHz (7.5 ns)
+             physical id: 5
+             slot: DIMM_F
+             size: 128MiB
+             width: 64 bits
+             clock: 133MHz (7.5ns)
+     *-pci:0
+          description: Host bridge
+          product: CNB20HE Host Bridge
+          vendor: Broadcom
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 23
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=32
+        *-network
+             description: Ethernet interface
+             product: 82557/8/9/0/1 Ethernet Pro 100
+             vendor: Intel Corporation
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             logical name: eth0
+             version: 08
+             serial: 00:06:5b:39:9a:c5
+             size: 100Mbit/s
+             capacity: 100Mbit/s
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list rom ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd autonegotiation
+             configuration: autonegotiation=on broadcast=yes driver=e100 driverversion=3.5.24-k2-NAPI duplex=full firmware=N/A ip=192.168.1.230 latency=32 link=yes maxlatency=56 mingnt=8 multicast=yes port=MII speed=100Mbit/s
+             resources: irq:16 memory:fe202000-fe202fff ioport:ecc0(size=64) memory:fe000000-fe0fffff memory:fe100000-fe1fffff
+        *-display UNCLAIMED
+             description: VGA compatible controller
+             product: Rage XL
+             vendor: ATI Technologies Inc
+             physical id: e
+             bus info: pci@0000:00:0e.0
+             version: 27
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm vga_controller bus_master cap_list
+             configuration: latency=32 mingnt=8
+             resources: memory:fd000000-fdffffff ioport:e800(size=256) memory:fe201000-fe201fff memory:50000000-5001ffff
+        *-isa
+             description: ISA bridge
+             product: OSB4 South Bridge
+             vendor: Broadcom
+             physical id: f
+             bus info: pci@0000:00:0f.0
+             version: 50
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: driver=piix4_smbus latency=0
+             resources: irq:0
+        *-ide
+             description: IDE interface
+             product: OSB4 IDE Controller
+             vendor: Broadcom
+             physical id: f.1
+             bus info: pci@0000:00:0f.1
+             logical name: scsi1
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide bus_master emulated
+             configuration: driver=pata_serverworks latency=64
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:8b0(size=16)
+           *-cdrom
+                description: SCSI CD-ROM
+                physical id: 0.0.0
+                bus info: scsi@1:0.0.0
+                logical name: /dev/scd0
+                logical name: /dev/sr0
+                capabilities: audio
+                configuration: status=nodisc
+        *-usb
+             description: USB Controller
+             product: OSB4/CSB5 OHCI USB Controller
+             vendor: Broadcom
+             physical id: f.2
+             bus info: pci@0000:00:0f.2
+             version: 04
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ohci bus_master
+             configuration: driver=ohci_hcd latency=32 maxlatency=80
+             resources: irq:10 memory:fe200000-fe200fff
+     *-pci:1
+          description: Host bridge
+          product: CNB20HE Host Bridge
+          vendor: Broadcom
+          physical id: 101
+          bus info: pci@0000:00:00.1
+          version: 01
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=32
+     *-pci:2
+          description: Host bridge
+          product: CNB20HE Host Bridge
+          vendor: Broadcom
+          physical id: 102
+          bus info: pci@0000:00:00.2
+          version: 01
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=32
+     *-pci:3
+          description: Host bridge
+          product: CNB20HE Host Bridge
+          vendor: Broadcom
+          physical id: 103
+          bus info: pci@0000:00:00.3
+          version: 01
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=32
+     *-pci:4
+          description: PCI bridge
+          product: 80960RM (i960RM) Bridge
+          vendor: Intel Corporation
+          physical id: 2
+          bus info: pci@0000:01:02.0
+          version: 01
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm normal_decode bus_master
+          resources: ioport:d000(size=4096) memory:fea00000-febfffff memory:50100000-501fffff
+        *-scsi:0 UNCLAIMED
+             description: SCSI storage controller
+             product: RAID subsystem HBA
+             vendor: Hynix Semiconductor (Hyundai Electronics)
+             physical id: 4
+             bus info: pci@0000:02:04.0
+             version: 01
+             width: 64 bits
+             clock: 66MHz
+             capabilities: scsi pm bus_master cap_list
+             configuration: latency=32 maxlatency=25 mingnt=40
+             resources: ioport:dc00(size=256) memory:feaff000-feafffff memory:feb00000-feb1ffff
+        *-scsi:1
+             description: SCSI storage controller
+             product: AIC-7899P U160/m
+             vendor: Hynix Semiconductor (Hyundai Electronics)
+             physical id: 4.1
+             bus info: pci@0000:02:04.1
+             logical name: scsi3
+             version: 01
+             width: 64 bits
+             clock: 66MHz
+             capabilities: scsi pm bus_master cap_list rom scsi-host
+             configuration: driver=aic7xxx latency=32 maxlatency=25 mingnt=40
+             resources: irq:28 ioport:d800(size=256) memory:feafe000-feafefff memory:50100000-5011ffff
+     *-storage
+          description: RAID bus controller
+          product: PowerEdge Expandable RAID Controller 3/Di
+          vendor: Winbond Electronics
+          physical id: 2.1
+          bus info: pci@0000:01:02.1
+          logical name: scsi0
+          version: 01
+          width: 32 bits
+          clock: 33MHz
+          capabilities: storage pm bus_master rom emulated
+          configuration: driver=aacraid latency=32
+          resources: irq:26 memory:f0000000-f7ffffff memory:fe900000-fe90ffff
+        *-disk:0
+             description: SCSI Disk
+             physical id: 0.0.0
+             bus info: scsi@0:0.0.0
+             logical name: /dev/sda
+             size: 67GiB (72GB)
+             capabilities: partitioned partitioned:dos
+           *-volume:0
+                description: Linux filesystem partition
+                vendor: Linux
+                physical id: 1
+                bus info: scsi@0:0.0.0,1
+                logical name: /dev/sda1
+                logical name: /boot
+                version: 1.0
+                serial: a1a504cf-d695-4fdb-9a63-f3d6229c88ee
+                size: 94MiB
+                capacity: 94MiB
+                capabilities: primary bootable extended_attributes ext2 initialized
+                configuration: filesystem=ext2 modified=2011-06-18 15:59:50 mount.fstype=ext2 mount.options=rw,relatime,errors=continue mounted=2011-01-01 23:45:03 state=mounted
+           *-volume:1
+                description: Linux swap volume
+                physical id: 2
+                bus info: scsi@0:0.0.0,2
+                logical name: /dev/sda2
+                version: 1
+                serial: a65c9b09-ce78-43ad-9ff8-51dc1bf44af3
+                size: 243MiB
+                capacity: 243MiB
+                capabilities: primary nofs swap initialized
+                configuration: filesystem=swap pagesize=4096
+           *-volume:2
+                description: EXT4 volume
+                vendor: Linux
+                physical id: 3
+                bus info: scsi@0:0.0.0,3
+                logical name: /dev/sda3
+                logical name: /
+                version: 1.0
+                serial: 49b05d2a-6d00-46d2-9607-624e9855b18f
+                size: 14GiB
+                capacity: 14GiB
+                capabilities: primary journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
+                configuration: created=2011-01-01 23:29:01 filesystem=ext4 lastmountpoint=/ modified=2011-04-22 15:20:54 mount.fstype=ext4 mount.options=rw,relatime,user_xattr,acl,barrier=1,data=ordered mounted=2011-06-18 15:59:50 state=mounted
+           *-volume:3
+                description: EXT4 volume
+                vendor: Linux
+                physical id: 4
+                bus info: scsi@0:0.0.0,4
+                logical name: /dev/sda4
+                logical name: /home
+                version: 1.0
+                serial: 07c6f4cc-e1bf-426a-a74f-d45f739b4ef0
+                size: 53GiB
+                capacity: 53GiB
+                capabilities: primary journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
+                configuration: created=2011-01-01 23:30:07 filesystem=ext4 lastmountpoint=/home modified=2011-06-18 15:59:50 mount.fstype=ext4 mount.options=rw,relatime,user_xattr,acl,barrier=1,data=ordered mounted=2011-06-18 15:59:50 state=mounted
+        *-disk:1 UNCLAIMED
+             description: SCSI Disk
+             product: ATLAS10K3_36_SCA
+             vendor: QUANTUM
+             physical id: 1.0.0
+             bus info: scsi@0:1.0.0
+             version: 120G
+             serial: 344219751738
+             capacity: 34GiB (36GB)
+             capabilities: 10000rpm
+             configuration: ansiversion=3
+        *-disk:2 UNCLAIMED
+             description: SCSI Disk
+             product: ATLAS10K3_36_SCA
+             vendor: QUANTUM
+             physical id: 1.1.0
+             bus info: scsi@0:1.1.0
+             version: 120G
+             serial: 344217550990
+             capacity: 34GiB (36GB)
+             capabilities: 10000rpm
+             configuration: ansiversion=3
+        *-disk:3 UNCLAIMED
+             description: SCSI Disk
+             product: ATLAS10K3_36_SCA
+             vendor: QUANTUM
+             physical id: 1.2.0
+             bus info: scsi@0:1.2.0
+             version: 120G
+             serial: 344218251657
+             capacity: 34GiB (36GB)
+             capabilities: 10000rpm
+             configuration: ansiversion=3
+        *-processor UNCLAIMED
+             description: SCSI Processor
+             product: 1x6 U2W SCSI BP
+             vendor: Winbond Electronics
+             physical id: 1.6.0
+             bus info: scsi@0:1.6.0
+             version: 1.29
+             serial: 1
+             configuration: ansiversion=2
