@@ -70,10 +70,10 @@ RAM:$color $mem/$memmax - $memperc% ${membar 4}
 Swap:$color $swap/$swapmax - $swapperc% ${swapbar 4}
 $hr
 Storage:
- Root ${fs_used /}/${fs_size /} ${fs_bar 6 /}
- Home ${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
- Terabyte ${fs_used /media/Terabyte}/${fs_size /media/Terabyte} ${fs_bar 6 /media/Terabyte}
- Windoze ${fs_used /media/Windoze}/${fs_size /media/Windoze} ${fs_bar 6 /media/Windoze}
+ Root: ${fs_used /}/${fs_size /} ${fs_bar 6 /}
+ Home: ${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
+ Terabyte: ${fs_used /media/Terabyte}/${fs_size /media/Terabyte} ${fs_bar 6 /media/Terabyte}
+ Windoze: ${fs_used /media/Windoze}/${fs_size /media/Windoze} ${fs_bar 6 /media/Windoze}
 $hr
 Net:
  In: ${addr eth0}
