@@ -62,26 +62,25 @@ show_graph_range no
 
 TEXT
 #$hr
-Host:$color$nodename
-OS: Arch $sysname $kernel - $machine
-Up:$color $uptime
-CPU:$color $cpu% ${cpubar 4}
-RAM:$color $mem/$memmax - $memperc% ${membar 4}
-Swap:$color $swap/$swapmax - $swapperc% ${swapbar 4}
-$hr
-Storage:
+${font BankGothic Md Bt :bold 10}System:$hr$font
+ Host:$color$nodename
+ OS: Arch $sysname $kernel - $machine
+ Up:$color $uptime
+ CPU:$color $cpu% ${cpubar 4}
+ RAM:$color $mem/$memmax - $memperc% ${membar 4}
+ Swap:$color $swap/$swapmax - $swapperc% ${swapbar 4}
+${font BankGothic Md Bt :bold 10}Storage:$hr$font
  Root: ${fs_used /}/${fs_size /} ${fs_bar 6 /}
  Home: ${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
  Terabyte: ${fs_used /media/Terabyte}/${fs_size /media/Terabyte} ${fs_bar 6 /media/Terabyte}
  Windoze: ${fs_used /media/Windoze}/${fs_size /media/Windoze} ${fs_bar 6 /media/Windoze}
-$hr
-Net:
+${font BankGothic Md Bt :bold 10}Net:$hr$font
  In: ${addr eth0}
  Ext: ${execi 3600 wget -O - http://ip.tupeux.com | tail}
  Up: ${upspeed eth0} - Down: ${downspeed eth0}
-$hr
-MPD: $mpd_bar
+${font BankGothic Md Bt :bold 10}MPD:$hr$font
  $mpd_artist
  $mpd_title
  $mpd_album
  $mpd_status $mpd_elapsed/$mpd_length
+ $mpd_bar
