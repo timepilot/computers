@@ -381,6 +381,10 @@ volumewidget:buttons(awful.util.table.join(
     awful.button({ }, 5, function () awful.util.spawn("amixer -q sset Master 5%-", false) end)
 ))
 
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 5%+") end),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 5%-") end),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer set Master toggle") end),
+
 -- WEATHER --
 
 weatherwidget = widget ({ type = "textbox" })
@@ -445,9 +449,6 @@ globalkeys = awful.util.table.join(
     -- User Added Keybindings
     awful.key({}, "Print", function () awful.util.spawn("scrotshooter") end),
     awful.key({}, "Alt_Sys_Req", function () awful.util.spawn("scrotshooter-aprint") end),
-    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 5%+") end),
-    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 5%-") end),
-    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer set Master toggle") end),
     awful.key({modkey }, "p", function() awful.util.spawn( "dmenu_run" ) end),
 
     -- Layout manipulation
