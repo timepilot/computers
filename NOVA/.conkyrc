@@ -79,8 +79,8 @@ ${font BankGothic Md Bt :bold 10}Net:$hr$font
  Ext: ${execi 3600 wget -O - http://ip.tupeux.com | tail}
  Up: ${upspeed eth0} - Down: ${downspeed eth0}
 ${font BankGothic Md Bt :bold 10}MPD:$hr$font
+ ${font BankGothic Md Bt :size=12}$mpd_title$font
  $mpd_artist
- $mpd_title
  $mpd_album
  $mpd_status $mpd_elapsed/$mpd_length
  $mpd_bar
