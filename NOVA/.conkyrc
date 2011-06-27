@@ -38,10 +38,11 @@ draw_graph_borders yes
 draw_outline no
 draw_shades no
 use_xft yes
-xftfont Sans:size=12
+xftfont BankGothic Lt BT:size=10
 gap_x 5
-gap_y 60
-minimum_size 5 5
+gap_y 30
+maximum_width 300
+minimum_size 300 5
 net_avg_samples 2
 no_buffers yes
 out_to_console no
@@ -60,45 +61,27 @@ show_graph_scale no
 show_graph_range no
 
 TEXT
-$nodename - $sysname $kernel on $machine
 $hr
-${color black}Uptime:$color $uptime
-${color black}Frequency (in MHz):$color $freq
-${color black}Frequency (in GHz):$color $freq_g
-${color black}RAM Usage:$color $mem/$memmax - $memperc% ${membar 4}
-${color black}Swap Usage:$color $swap/$swapmax - $swapperc% ${swapbar 4}
-${color black}CPU Usage:$color $cpu% ${cpubar 4}
-${color black}Processes:$color $processes  ${color black}Running:$color $running_processes
+Host:$color$nodename
+OS: Arch $sysname $kernel - $machine
+Up:$color $uptime
+CPU:$color $cpu% ${cpubar 4}
+RAM:$color $mem/$memmax - $memperc% ${membar 4}
+Swap:$color $swap/$swapmax - $swapperc% ${swapbar 4}
 $hr
-${color black}File Systems:
-${color black} Root $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
- Home $color${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
- Terabyte $color${fs_used /media/Terabyte}/${fs_size /media/Terabyte} ${fs_bar 6 /media/Terabyte}
- Windoze $color${fs_used /media/Windoze}/${fs_size /media/Windoze} ${fs_bar 6 /media/Windoze}
+Storage:
+ Root ${fs_used /}/${fs_size /} ${fs_bar 6 /}
+ Home ${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
+ Terabyte ${fs_used /media/Terabyte}/${fs_size /media/Terabyte} ${fs_bar 6 /media/Terabyte}
+ Windoze ${fs_used /media/Windoze}/${fs_size /media/Windoze} ${fs_bar 6 /media/Windoze}
 $hr
-${color black}Networking:
- Up:$color ${upspeed eth0} ${color black} - Down:$color ${downspeed eth0}
+Net:
+ In: ${addr eth0}
+ Ext: ${execi 3600 wget -O - http://ip.tupeux.com | tail}
+ Up: ${upspeed eth0} - Down: ${downspeed eth0}
 $hr
-MPD:
- $mpd_smart
+MPD: $mpd_bar
+ $mpd_artist
+ $mpd_title
  $mpd_album
  $mpd_status $mpd_elapsed/$mpd_length
-#$hr
-#${color black}Name           	CPU%		 MEM%
-#${color black} ${top name 1} 	${top cpu 1} 	${top mem 1}
-#${color black} ${top name 2} 	${top cpu 2} 	${top mem 2}
-#${color black} ${top name 3} 	${top cpu 3} 	${top mem 3}
-#${color black} ${top name 4} 	${top cpu 4} 	${top mem 4}
-#$hr
-#Pacman and AUR Status:
-# ...
-# Notice that paconky is executed with "execpi" at an interval of 3600 seconds.
-# There's no point in checking the AUR more than once an hour or your repo
-# pkgs more often than you update your database.
-# The voffset at the end seems to keep the list from getting cut off when it grows.
-#${execpi 3600 paconky /home/burchettm/.conky/repos.paconky}
-#${execpi 3600 paconky /home/burchettm/.conky/aur.paconky}
-#${voffset 900}
-#$hr
-#Current Weather:
-#${execi 300 /home/burchettm/.conky/weather.sh 63088}
