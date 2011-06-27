@@ -61,7 +61,7 @@ show_graph_scale no
 show_graph_range no
 
 TEXT
-$hr
+#$hr
 Host:$color$nodename
 OS: Arch $sysname $kernel - $machine
 Up:$color $uptime
