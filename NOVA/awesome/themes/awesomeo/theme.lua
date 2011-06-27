@@ -4,7 +4,7 @@
 
 theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "BankGothic Lt Bt 8"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#448C94"
@@ -104,4 +104,3 @@ theme.menu_system = "/usr/share/icons/gnome/32x32/categories/applications-system
 theme.menu_programming = "/usr/share/icons/gnome/32x32/categories/applications-development.png"
 
 return theme
--- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:encoding=utf-8:textwidth=80
