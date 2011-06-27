@@ -21,12 +21,15 @@ theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
 
+-- TOOLTIP --
+--theme.tooltip_font = "Sans 8"
+
 -- There are other variable sets
 -- overriding the default one when
 -- defined, the sets are:
 -- [taglist|tasklist]_[bg|fg]_[focus|urgent]
 -- titlebar_[bg|fg]_[normal|focus]
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
+-- tooltip_[Sans 8]
 -- mouse_finder_[color|timeout|animate_timeout|radius|factor]
 -- Example:
 --theme.taglist_bg_focus = "#ff0000"
