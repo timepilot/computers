@@ -32,6 +32,9 @@ end
 -- -- SPECIFY THEME LOCATION (CONSISTS OF COLOURS, ICONS, AND WALLPAPERS) -- --
 beautiful.init("/home/burchettm/.config/awesome/themes/awesomeo/theme.lua")
 
+-- CHANGE NAUGHTY FONT TO DIFFER FROM BANKGOTHIC LT BT --
+naughty.config.default_preset.font = "Sans 8"
+
 -- -- SPECIFY DEFAULT APPLICATIONS -- --
 terminal = "/usr/bin/terminal --hide-menubar"			-- Specify Default Terminal
 editor = os.getenv("EDITOR") or "vim"
