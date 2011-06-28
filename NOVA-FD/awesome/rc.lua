@@ -16,6 +16,7 @@ require("debian.menu") 			-- Debian Menu Generator, don't have to create a menu!
 awful.util.spawn_with_shell("conky")
 awful.util.spawn_with_shell("dropbox start")
 awful.util.spawn_with_shell("wicd-gtk")
+awful.util.spawn_with_shell("wmname LG3D")
 
 -- DISABLE BUSY CURSOR WITH AWFUL.UTIL.SPAWN --
 -- disable startup-notification globally
@@ -78,6 +79,7 @@ myawesomemenu = {
 
 mymainmenu = awful.menu({ items = { { " ", " " },
                                     { "GMPC", "gmpc" },
+                                    { "Minecraft", "java -Xmx1024M -Xms512M -cp /home/burchettm/.minecraft/minecraft.jar net.minecraft.LauncherFrame" },
                                     { "Opera", "opera" },
                                     { "Pidgin", "pidgin" },
                                     { "Skype", "skype" },
