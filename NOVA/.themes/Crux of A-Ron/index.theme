@@ -1,0 +1,15 @@
+
+[Desktop Entry]
+Name=Crux of A-Ron
+Type=X-GNOME-Metatheme
+Comment=
+
+GenericName=
+
+[X-GNOME-Metatheme]
+GtkTheme=Crux
+MetacityTheme=Crux
+IconTheme=gnome
+GtkColorScheme=fg_color:#101010101010,bg_color:#e8c7eaeaebeb,text_color:#1a1a1a1a1a1a,base_color:#ffffffffffff,selected_fg_color:#ffffffffffff,selected_bg_color:#44588c579421,tooltip_fg_color:#ffffffffffff,tooltip_bg_color:#56b556b556b5
+CursorTheme=default
+CursorSize=18

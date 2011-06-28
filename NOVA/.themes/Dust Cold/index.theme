@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Dust Cold
+Comment=Ubuntu Dust Cold theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Dust Cold
+MetacityTheme=Dust Cold
+IconTheme=Humanity-Dark
+CursorTheme=DMZ-White
