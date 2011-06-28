@@ -1,0 +1,18 @@
+# Check for an interactive session
+[ -z "$PS1" ] && return
+#Main User Bash
+#PS1='[\A]\[$(tput setaf 4)\]\[$(tput bold 1)\][\u@\h]\[$(tput sgr0)\]\[$(tput setaf 2)\][\w]$ \[$(tput sgr0)\]'
+#Main Root Bash
+PS1='[\A]\[$(tput setaf 1)\]\[$(tput bold 1)\][\u@\h]\[$(tput sgr0)\]\[$(tput setaf 2)\][\w]# \[$(tput sgr0)\]'
+
+#List VIM as Defualt Editor
+export EDITOR="vim"
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f /home/.bash_aliases ]; then
+    . /home/.bash_aliases
+fi
