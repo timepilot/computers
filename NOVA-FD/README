@@ -3,4 +3,6 @@ NOVA FLASH DRIVE
 SanDisk Cruzer 8GB
 Running Ubuntu 10.04 LTS with AwesomeWM
 
-Flash Drive OS built to be able to be carried from computer to computer and still have Linux
+Flash Drive OS built to be able to be carried from computer to computer and still have Linux and my setup.
+
+I started by installing Xubuntu, then completely removing Xubuntu from the system, leaving me with just the Ubuntu shell, then I continued by installing AwesomeWM and all the awesome Libraries, and made it look as close to my desktop as I could so I have something I'm comfortable with.
