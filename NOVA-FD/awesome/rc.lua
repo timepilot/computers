@@ -1,6 +1,6 @@
--- -- NOVA Awesome Setup -- --
+-- -- NOVA-FD Awesome Setup -- --
 -- -- Created by Matt Burchett -- --
--- -- Fri, 2010/06/10 -- --
+-- -- Fri, 2010/06/28 -- --
 
 -- -- LIBRARY REQUIREMENTS -- --
 -- -- THERE MAY BE LIBRARIES COMMENTED OUT THAT ARE CURRENTLY OUT OF USE -- --
@@ -377,6 +377,7 @@ awful.rules.rules = {
     { rule = { class = "Skype" }, properties = { tag = tags[1][4]  } },
     { rule = { class = "Sonata" }, properties = { tag = tags[1][5] } },
     { rule = { class = "Turpial" }, properties = { tag = tags[1][6] } },
+    { rule = { class = "Gmpc" }, properties = { tag = tags[1][5] } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
