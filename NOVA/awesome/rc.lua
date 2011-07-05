@@ -17,6 +17,7 @@ awful.util.spawn_with_shell("conky")
 awful.util.spawn_with_shell("dropboxd")
 awful.util.spawn_with_shell("mpd")
 awful.util.spawn_with_shell("/usr/lib/vino/vino-server --sm-disable")
+awful.util.spawn_with_shell("synergys -c /home/burchettm/.quicksynergy/synergy.conf")
 awful.util.spawn_with_shell("/usr/bin/numlockx")
 awful.util.spawn_with_shell("wmname LG3D")
 
@@ -124,11 +125,14 @@ mygamesmenu = {
    { "America's Army 3", "env WINEPREFIX='/home/burchettm/.wineprefix/Steam' wine winebrowser steam://rungameid/13140" },
    { "Ceiling Fan Man", "env WINEPREFIX='/home/burchettm/.wineprefix/SFGames' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/SFGames/dosdevices/c:/users/burchettm/Start\\ Menu/Programs/Skyfall/Ceiling\\ Fan\\ Man/Play\\ Ceiling\\ Fan\\ Man.lnk" },
    { "Ceiling Fan Man II", "env WINEPREFIX='/home/burchettm/.wineprefix/SFGames' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/SFGames/dosdevices/c:/users/burchettm/Start\\ Menu/Programs/Skyfall/Ceiling\\ Fan\\ Man\\ II\\ Demo/Play\\ Ceiling\\ Fan\\ Man\\ II.lnk" },
+   { "CS:S Beta", "env WINEPREFIX='/home/burchettm/.wineprefix/Steam' wine winebrowser steam://rungameid/260" },
    { "Curse Client", "env WINEPREFIX='/home/burchettm/.wineprefix/Curse' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/Curse/dosdevices/c:/users/Public/Start\\ Menu/Programs/Curse/Curse\\ Client.lnk" },
    { "Fallout 3", "env WINEPREFIX='/home/burchettm/.wineprefix/Fallout3' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/Fallout3/dosdevices/c:/users/Public/Start\\ Menu/Programs/Bethesda\\ Softworks/Fallout\\ 3/Fallout\\ 3.lnk" },
    { "Frets on Fire", "fretsonfire" },
+   { "Garry's Mod", "env WINEPREFIX='/home/burchettm/.wineprefix/Steam' wine winebrowser steam://rungameid/4000" },
    { "GCFScape", "env WINEPREFIX='/home/burchettm/.wine' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wine/dosdevices/c:/users/Public/Start\\ Menu/Programs/GCFScape/GCFScape.lnk" },
    { "GTA San Andreas", "env WINEPREFIX='/home/burchettm/.wineprefix/GTASA' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/GTASA/dosdevices/c:/users/Public/Start\\ Menu/Programs/Rockstar\\ Games/GTA\\ San\\ Andreas/Play\\ GTA\\ San\\ Andreas.lnk" },
+   { "GTA Vice City", "env WINEPREFIX='/home/burchettm/.wineprefix/GTAVC' wine '/home/burchettm/.wineprefix/GTAVC/drive_c/Program Files/Rockstar Games/Grand Theft Auto Vice City/gta-vc.exe'" },
    { "Imprudence", "/usr/bin/imprudence-secondlife" },
    { "Infiltration", "env WINEPREFIX='/home/burchettm/.wineprefix/UT' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/UT/dosdevices/c:/users/Public/Start\\ Menu/Programs/SentryStudios/Infiltration/Play\\ Infiltration.lnk" },
    { "LinCity-NG", "lincity-ng" },
@@ -137,6 +141,7 @@ mygamesmenu = {
    { "Minecraft", "minecraft" },
    { "Oblivion", "env WINEPREFIX='/home/burchettm/.wineprefix/Oblivion' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/Oblivion/dosdevices/c:/users/Public/Start\\ Menu/Programs/Bethesda\\ Softworks/Oblivion/Oblivion.lnk" },
    { "PlayOnLinux", "playonlinux" },
+   { "PyLoTRO", "pylotro" },
    { "Second Life", "/usr/bin/secondlife" },
    { "SimCity 4 Deluxe", "env WINEPREFIX='/home/burchettm/.wineprefix/SimCity4' wine '/home/burchettm/.wineprefix/SimCity4/drive_c/Program Files/Maxis/SimCity 4 Deluxe/Apps/SimCity 4.exe' -intro:off -customresolution:enabled -r1920x1080x32" },
    { "Sims 3", "env WINEPREFIX='/home/burchettm/.wineprefix/TheSims3' wine '/home/burchettm/.wineprefix/TheSims3/drive_c/Program Files/Electronic Arts/The Sims 3 Outdoor Living Stuff/Game/Bin/TS3SP03.exe'" },
@@ -146,7 +151,7 @@ mygamesmenu = {
    { "Steam", "env WINEPREFIX='/home/burchettm/.wineprefix/Steam' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/Steam/dosdevices/c:/users/burchettm/Start\\ Menu/Programs/Steam/Steam.lnk" },
    { "Strike Force 181", "env WINEPREFIX='/home/burchettm/.wineprefix/UT' wine C:\\\\unrealtournament\\\\System\\\\Strike\\ Force.exe" },
    { "SuperTuxKart", "/usr/bin/supertuxkart --log=file" },
-   { "PyLoTRO", "pylotro" },
+   { "Team Fortress 2", "env WINEPREFIX='/home/burchettm/.wineprefix/Steam' wine winebrowser steam://rungameid/440" },
    { "UT2004", "env WINEPREFIX='/home/burchettm/.wineprefix/UT' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/UT/dosdevices/c:/users/Public/Start\\ Menu/Programs/Unreal\\ Tournament\\ 2004/Play\\ UT2004.lnk" },
    { "UTGOTY", "env WINEPREFIX='/home/burchettm/.wineprefix/UT' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/UT/dosdevices/c:/users/Public/Start\\ Menu/Programs/Unreal\\ Tournament\\ G.O.T.Y.\\ Edition/Play\\ Unreal\\ Tournament.lnk" },
    { "World of Padman", "worldofpadman" },
@@ -199,6 +204,13 @@ myinternetmenu = {
 
 myofficemenu = {
    { "Dictionary", "xfce4-dict" },
+   { "LibreOffice", "libreoffice" },
+   { "LibreOffice Base", "libreoffice --base" },
+   { "LibreOffice Calc", "libreoffice --calc" },
+   { "LibreOffice Draw", "libreoffice --draw" },
+   { "LibreOffice Impress", "libreoffice --impress"},
+   { "LibreOffice Math", "libreoffice --math" },
+   { "LibreOffice Writer", "libreoffice --writer" },
    { "Orage Calendar", "orage" },
    { "Orage Globaltime", "globaltime" },
    { "PDF Viewer", "epdfview" }
