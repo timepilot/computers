@@ -1,0 +1,18 @@
+URxvt*geometry:                 85x30
+urxvt*background:               rgba:ffff/ffff/ffff/ffff
+URxvt*foreground:               #FFFFFF
+URxvt*tintColor:                #222222
+URxvt*inheritPixmap:            true
+URxvt*reverseVideo:             false   
+URxvt*tintColor:                #222222
+#URxvt*fading:                   30              !term unfocus     
+URxvt*font:                     xft:Monospace:pixelsize=13:antialias=true
+URxvt*scrollBar:                false
+URxvt*transparent: true
+URxvt*shading: 70
+URxvt*borderLess: true 
+urxvt.depth: 32
+urxvt*internalBorder: 4
+urxvt.secondaryScroll: false
+URxvt.termName: rxvt-unicode
+URxvt.cursorColor: #00FF00
