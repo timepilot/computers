@@ -18,6 +18,10 @@ export EDITOR="vim"
 
 #Set GIT Directory Variable
 export GITDIR="/home/burchettm/.git/computers"
+export GIT="/home/burchettm/.git"
+
+#Set ScreenShots Directory Variable
+export SCREENSHOTS="/home/burchettm/Desktop/Screenshots"
 
 #Enable LIBETC (dotfiles mover)
 #export LD_PRELOAD=libetc.so
