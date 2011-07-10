@@ -15,7 +15,7 @@ require("debian.menu") 			-- Debian Menu Generator, don't have to create a menu!
 -- -- APP AUTOSTART -- --
 awful.util.spawn_with_shell("conky")
 awful.util.spawn_with_shell("dropbox start")
-awful.util.spawn_with_shell("wicd-gtk")
+awful.util.spawn_with_shell("nm-applet")
 awful.util.spawn_with_shell("wmname LG3D")
 
 -- DISABLE BUSY CURSOR WITH AWFUL.UTIL.SPAWN --
