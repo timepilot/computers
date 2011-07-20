@@ -281,6 +281,7 @@ mymainmenu = awful.menu({ items = { { " ", " " },
                                     { "Opera", "opera" },
                                     { "Pidgin", "pidgin" },
                                     { "Skype", "skype" },
+                                    { "NCMPC++", "terminal --geometry 200x60 --hide-menubar -e ncmpcpp" },
                                     { "Sonata", "sonata" },
                                     { "TeamSpeak3", "teamspeak3" },
                                     { "Terminal", terminal },
@@ -457,9 +458,13 @@ globalkeys = awful.util.table.join(
     -- User Added Keybindings
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 5%+") end),
     awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 5%-") end),
-    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer set Master toggle") end),
-    awful.key({}, "Print", function () awful.util.spawn("scrotshooter") end),
-    awful.key({}, "Alt_Sys_Req", function () awful.util.spawn("scrotshooter-aprint") end),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer set Master toggle") end), 
+    awful.key({}, "XF86AudioNext", function () awful.util.spawn("mpc next") end),  
+    awful.key({}, "XF86AudioPrev", function () awful.util.spawn("mpc prev") end),  
+    awful.key({}, "XF86AudioStop", function () awful.util.spawn("mpc stop") end),  
+    awful.key({}, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
+    awful.key({}, "Print", function () awful.util.spawn("scrotshooter") end), 
+    awful.key({}, "Sys_Req", function () awful.util.spawn("scrotshooter-aprint") end),
     awful.key({modkey }, "p", function() awful.util.spawn( "dmenu_run" ) end),
 
     -- Layout manipulation
@@ -586,6 +591,7 @@ awful.rules.rules = {
     { rule = { class = "Skype" }, properties = { tag = tags[1][4]  } },
     { rule = { class = "Sonata" }, properties = { tag = tags[1][5] } },
     { rule = { class = "Turpial" }, properties = { tag = tags[1][6] } },
+    { rule = { class = "NCMPC++" }, properties = { tag = tags[1][5] } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
