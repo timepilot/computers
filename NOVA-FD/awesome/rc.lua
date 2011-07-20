@@ -1,6 +1,6 @@
--- -- NOVA-FD Awesome Setup -- --
+-- -- NOVA Awesome Setup -- --
 -- -- Created by Matt Burchett -- --
--- -- Fri, 2010/06/28 -- --
+-- -- Fri, 2010/06/10 -- --
 
 -- -- LIBRARY REQUIREMENTS -- --
 -- -- THERE MAY BE LIBRARIES COMMENTED OUT THAT ARE CURRENTLY OUT OF USE -- --
@@ -10,11 +10,12 @@ require("awful.rules")			-- Standard Awesome Library
 require("beautiful")			-- Theme Handling Library
 require("naughty")			-- Notification Library
 require("vicious")			-- Dynamic Widget Library
-require("lib/cal")				-- Calendar Library / Widget
-require("debian.menu") 			-- Debian Menu Generator, don't have to create a menu! WHOO!
+require("lib/cal")			-- Calendar Library / Widget
+require("xdg-menu")
+
 -- -- APP AUTOSTART -- --
 awful.util.spawn_with_shell("conky")
-awful.util.spawn_with_shell("dropbox start")
+awful.util.spawn_with_shell("dropboxd")
 awful.util.spawn_with_shell("nm-applet")
 awful.util.spawn_with_shell("wmname LG3D")
 
@@ -34,7 +35,7 @@ beautiful.init("/home/burchettm/.config/awesome/themes/awesomeo/theme.lua")
 naughty.config.default_preset.font = "Sans 8"
 
 -- -- SPECIFY DEFAULT APPLICATIONS -- --
-terminal = "/usr/bin/xfce4-terminal --hide-menubar"			-- Specify Default Terminal
+terminal = "/usr/bin/terminal --hide-menubar --geometry 60x5"			-- Specify Default Terminal
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4" -- Set ModKey to Windows Key, use xmodmap to change
@@ -77,25 +78,29 @@ myawesomemenu = {
    { "Quit", awesome.quit }
 }
 
+mygamesmenu = {
+   { "AoE II", "env WINEPREFIX='/home/burchettm/.wineprefix/AoEII' wine '/home/burchettm/.wineprefix/AoEII/drive_c/Program Files/Age of Empires 2/empires2.exe'" },
+   { "Bejeweled 2", "env WINEPREFIX='/home/burchettm/.wineprefix/Bejeweled2' wine '/home/burchettm/.wineprefix/Bejeweled2/drive_c/Program Files/Bejeweled 2 Deluxe/WinBej2.exe'" },
+}
+
 mymainmenu = awful.menu({ items = { { " ", " " },
-                                    { "GMPC", "gmpc" },
-                                    { "Minecraft", "java -Xmx1024M -Xms512M -cp /home/burchettm/.minecraft/minecraft.jar net.minecraft.LauncherFrame" },
                                     { "Opera", "opera" },
                                     { "Pidgin", "pidgin" },
                                     { "Skype", "skype" },
-                                    { "TeamSpeak3", "/home/burchettm/teamspeak3/ts3client_runscript.sh" },
+                                    { "Sonata", "sonata" },
+                                    { "TeamSpeak3", "teamspeak3" },
                                     { "Terminal", terminal },
                                     { "Thunderbird", "thunderbird" },
                                     { "Turpial", "turpial" },
-                                    { "VLC", "vlc" },
                                     { " ", " " },
-                                    { "Debian", debian.menu.Debian_menu.Debian, beautiful.ubuntu_icon },
+                                    { "ArchLinux", xdgmenu, beautiful.arch_icon},
+                                    { "Games", mygamesmenu, beautiful.menu_games },
                                     { " ", " " },
                                     { "Awesome", myawesomemenu, beautiful.awesome_icon }
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = image(beautiful.ubuntu_icon),
+mylauncher = awful.widget.launcher({ image = image(beautiful.arch_icon),
                                      menu = mymainmenu })
 
 -- -- WIBOXES -- --
@@ -250,7 +255,7 @@ globalkeys = awful.util.table.join(
     -- User Added Keybindings
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 5%+") end),
     awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 5%-") end),
-    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer set Master toggle") end),    
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer set Master toggle") end),
     awful.key({}, "Print", function () awful.util.spawn("scrotshooter") end),
     awful.key({}, "Alt_Sys_Req", function () awful.util.spawn("scrotshooter-aprint") end),
     awful.key({modkey }, "p", function() awful.util.spawn( "dmenu_run" ) end),
@@ -379,7 +384,6 @@ awful.rules.rules = {
     { rule = { class = "Skype" }, properties = { tag = tags[1][4]  } },
     { rule = { class = "Sonata" }, properties = { tag = tags[1][5] } },
     { rule = { class = "Turpial" }, properties = { tag = tags[1][6] } },
-    { rule = { class = "Gmpc" }, properties = { tag = tags[1][5] } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },

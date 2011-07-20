@@ -1,0 +1,18 @@
+#!/bin/sh
+
+SERVICE=synergys
+
+if pgrep $SERVICE > /dev/null
+then
+echo "$SERVICE is running."
+#echo "Starting $SERVICE ..."
+#synergys -c /home/burchettm/.quicksynergy/synergy.conf
+#  if pgrep $SERVICE > /dev/null
+#  then
+#  echo "$SERVICE started ..."
+#  else
+#  echo "$SERVICE failed to start ..."
+#  fi
+else
+echo "$SERVICE is NOT running."
+fi

@@ -77,7 +77,7 @@ theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/defau
 theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/maximized_focus_active.png"
 
 -- You can use your own command to set your wallpaper
-theme.wallpaper_cmd = { "awsetbg '/home/burchettm/Pictures/Wallpaper/GodNow.jpg'" }
+theme.wallpaper_cmd = { "awsetbg '/home/burchettm/Pictures/Wallpaper/Anonymous.jpg'" }
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/usr/share/awesome/themes/default/layouts/fairhw.png"
@@ -96,7 +96,7 @@ theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
 theme.awesome_icon = "/home/burchettm/.config/awesome/themes/awesomeo/awesome16.png"
 -- User Added Icons
 -- -- Menus
-theme.ubuntu_icon = "/home/burchettm/.config/awesome/themes/awesomeo/starthere.png"
+theme.arch_icon = "/home/burchettm/.config/awesome/themes/awesomeo/starthere.png"
 theme.menu_accessories = "/usr/share/icons/gnome/32x32/categories/applications-accessories.png"
 theme.menu_games = "/usr/share/icons/gnome/32x32/categories/applications-games.png"
 theme.menu_graphics = "/usr/share/icons/gnome/32x32/categories/applications-graphics.png"
