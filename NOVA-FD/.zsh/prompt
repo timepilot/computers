@@ -1,0 +1,1 @@
+PROMPT="[%T]%B%{$fg[cyan]%}[%n@%M]%b%{$fg[cyan]%}[%~]%#%{$reset_color%} "
