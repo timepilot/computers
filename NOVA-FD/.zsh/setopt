@@ -1,0 +1,7 @@
+# Created by newuser for 4.3.12
+autoload -U compinit promptinit
+autoload -U colors && colors
+compinit
+promptinit
+
+PROMPT="[%T][%B%{$fg[cyan]%}%n@%M]%b%{$fg[cyan]%}[%~]%#%{$reset_color%} "
