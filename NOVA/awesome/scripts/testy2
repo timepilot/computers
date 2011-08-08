@@ -2,7 +2,7 @@
 
 SERVICE=synergys
 
-if pgrep synergys > /dev/null
+if [ -n 'pgrep synergys >/dev/null' ]
 then
 echo "$SERVICE is NOT running."
 #echo "Starting $SERVICE ..."

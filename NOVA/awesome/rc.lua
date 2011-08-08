@@ -17,8 +17,9 @@ awful.util.spawn_with_shell("conky")
 awful.util.spawn_with_shell("dropboxd")
 awful.util.spawn_with_shell("mpd")
 awful.util.spawn_with_shell("/usr/lib/vino/vino-server --sm-disable")
-awful.util.spawn_with_shell("synergys -c /home/burchettm/.quicksynergy/synergy.conf")
+--awful.util.spawn_with_shell("synergys -c /home/burchettm/.quicksynergy/synergy.conf")
 awful.util.spawn_with_shell("/usr/bin/numlockx")
+awful.util.spawn_with_shell("xscreensaver -nosplash")
 awful.util.spawn_with_shell("wmname LG3D")
 
 -- DISABLE BUSY CURSOR WITH AWFUL.UTIL.SPAWN --
@@ -144,7 +145,7 @@ mygamesmenu = {
    { "PyLoTRO", "pylotro" },
    { "Second Life", "/usr/bin/secondlife" },
    { "SimCity 4 Deluxe", "env WINEPREFIX='/home/burchettm/.wineprefix/SimCity4' wine '/home/burchettm/.wineprefix/SimCity4/drive_c/Program Files/Maxis/SimCity 4 Deluxe/Apps/SimCity 4.exe' -intro:off -customresolution:enabled -r1920x1080x32" },
-   { "Sims 3", "env WINEPREFIX='/home/burchettm/.wineprefix/TheSims3' wine '/home/burchettm/.wineprefix/TheSims3/drive_c/Program Files/Electronic Arts/The Sims 3 Outdoor Living Stuff/Game/Bin/TS3SP03.exe'" },
+   { "Sims 3", "/home/burchettm/bin/sims3" },
    { "SLiteChat", "env WINEPREFIX='/home/burchettm/.wine' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wine/dosdevices/c:/users/Public/Start\\ Menu/Programs/SLiteChat\\ for\\ Windows/SLiteChat\\ -\\ Text-based\\ IM\\ client\\ for\\ Second\\ Life.lnk" },
    { "Soldier of Fortune", "env WINEPREFIX='/home/burchettm/.wineprefix/SOF' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/SOF/dosdevices/c:/users/Public/Start\\ Menu/Programs/Raven\\ Software/Soldier\\ of\\ Fortune\\ Platinum/Soldier\\ of\\ Fortune\\ Platinum.lnk" },
    { "Snowglobe 1.3", "snowglobe" },
@@ -466,6 +467,7 @@ globalkeys = awful.util.table.join(
     awful.key({}, "Print", function () awful.util.spawn("scrotshooter") end), 
     awful.key({}, "Sys_Req", function () awful.util.spawn("scrotshooter-aprint") end),
     awful.key({modkey }, "p", function() awful.util.spawn( "dmenu_run" ) end),
+    awful.key({modkey }, "e", function() awful.util.spawn( "pcmanfm" ) end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
