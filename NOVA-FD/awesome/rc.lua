@@ -265,7 +265,8 @@ globalkeys = awful.util.table.join(
     awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer set Master toggle") end),
     awful.key({}, "Print", function () awful.util.spawn("scrotshooter") end),
     awful.key({}, "Alt_Sys_Req", function () awful.util.spawn("scrotshooter-aprint") end),
-    awful.key({modkey }, "p", function() awful.util.spawn( "dmenu_run" ) end),
+    awful.key({modkey }, "p", function () awful.util.spawn( "dmenu_run" ) end),
+    awful.key({modkey }, "e", function () awful.util.spawn( "pcmanfm" ) end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
