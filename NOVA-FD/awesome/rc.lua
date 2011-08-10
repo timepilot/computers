@@ -80,8 +80,14 @@ myawesomemenu = {
 
 mygamesmenu = {
    { "AoE II", "env WINEPREFIX='/home/burchettm/.wineprefix/AoEII' wine '/home/burchettm/.wineprefix/AoEII/drive_c/Program Files/Age of Empires 2/empires2.exe'" },
-   { "Bejeweled 2", "env WINEPREFIX='/home/burchettm/.wineprefix/Bejeweled2' wine '/home/burchettm/.wineprefix/Bejeweled2/drive_c/Program Files/Bejeweled 2 Deluxe/WinBej2.exe'" },
+   { "Bejeweled 2", "env WINEPREFIX='/home/burchettm/.wineprefix/Bejeweled2' wine '/home/burchettm/.wineprefix/Bejeweled2/drive_c/Program Files/Bejeweled 2 Deluxe/WinBej2.exe'" }
 }
+
+mygraphicsmenu = {
+   { "Adobe Photoshop 7", "env WINEPREFIX='/home/burchettm/.wineprefix/Adobe' wine '/home/burchettm/.wineprefix/Adobe/drive_c/Program Files/Adobe/Photoshop 7.0/Photoshop.exe'" },
+   { "Dreamweaver 8", "env WINEPREFIX='/home/burchettm/.wineprefix/Adobe' wine '/home/burchettm/.wineprefix/Adobe/drive_c/Program files/Macromedia/Dreamweaver 8/Dreamweaver.exe'" }
+}
+   
 
 mymainmenu = awful.menu({ items = { { " ", " " },
                                     { "Opera", "opera" },
@@ -95,6 +101,7 @@ mymainmenu = awful.menu({ items = { { " ", " " },
                                     { " ", " " },
                                     { "ArchLinux", xdgmenu, beautiful.arch_icon},
                                     { "Games", mygamesmenu, beautiful.menu_games },
+                                    { "graphics", mygraphicsmenu, beautiful.menu_graphics },
                                     { " ", " " },
                                     { "Awesome", myawesomemenu, beautiful.awesome_icon }
                                   }
