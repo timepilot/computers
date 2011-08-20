@@ -14,6 +14,7 @@ require("lib/cal")				-- Calendar Library / Widget
 
 -- -- APP AUTOSTART -- --
 awful.util.spawn_with_shell("conky")
+--awful.util.spawn_with_shell("conky --config /home/burchettm/.conky/conkyrc2")
 awful.util.spawn_with_shell("dropboxd")
 awful.util.spawn_with_shell("mpd")
 awful.util.spawn_with_shell("/usr/lib/vino/vino-server --sm-disable")
@@ -156,7 +157,7 @@ mygamesmenu = {
    { "UT2004", "env WINEPREFIX='/home/burchettm/.wineprefix/UT' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/UT/dosdevices/c:/users/Public/Start\\ Menu/Programs/Unreal\\ Tournament\\ 2004/Play\\ UT2004.lnk" },
    { "UTGOTY", "env WINEPREFIX='/home/burchettm/.wineprefix/UT' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wineprefix/UT/dosdevices/c:/users/Public/Start\\ Menu/Programs/Unreal\\ Tournament\\ G.O.T.Y.\\ Edition/Play\\ Unreal\\ Tournament.lnk" },
    { "World of Padman", "worldofpadman" },
-   { "WoW-Cataclysm", "wine '/media/Terabyte/WoW-Cataclysm/Launcher.exe" },
+   { "WoW-Cataclysm", "wine '/media/Terabyte/WoW-Cataclysm/Wow.exe'" },
    { "WoW-PTR", "env WINEPREFIX='/home/burchettm/.wine' wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/burchettm/.wine/dosdevices/c:/users/Public/Start\\ Menu/Programs/World\\ of\\ Warcraft\\ Public\\ Test/World\\ of\\ Warcraft.lnk" },
    { "WoW-WotLK", "wine '/media/Terabyte/WoW-WoTLK/Wow.exe'" }
 }
@@ -587,7 +588,7 @@ awful.rules.rules = {
     { rule = { class = "pinentry" },
       properties = { floating = true } },
     { rule = { class = "gimp" },
-      properties = { floating = true } },
+      properties = { maximized_vertical = true, maximized_horizontal = true  } },
     { rule = { class = "Opera" }, properties = { tag = tags[1][3] } },
     { rule = { class = "Pidgin" }, properties = { tag = tags[1][4] } },
     { rule = { class = "Skype" }, properties = { tag = tags[1][4]  } },
