@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-SERVICE=synergys
+SERVICE=x11vnc
 
 if pidof $SERVICE > /dev/null
 then
@@ -17,7 +17,8 @@ else
 
 echo "$SERVICE is NOT running."
 echo "Starting $SERVICE ..."
-synergys -c /home/burchettm/.quicksynergy/synergy.conf
+
+x11vnc -rfbauth -bg -q ~/.vnc/passwd >> /home/burchettm/.log/x11vnc.log
   if pidof $SERVICE > /dev/null
   then
   echo "$SERVICE started ..."
@@ -26,4 +27,3 @@ synergys -c /home/burchettm/.quicksynergy/synergy.conf
   fi
 
 fi
-

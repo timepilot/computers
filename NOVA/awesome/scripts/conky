@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-SERVICE=synergys
+SERVICE=conky
 
 if pidof $SERVICE > /dev/null
 then
@@ -17,7 +17,7 @@ else
 
 echo "$SERVICE is NOT running."
 echo "Starting $SERVICE ..."
-synergys -c /home/burchettm/.quicksynergy/synergy.conf
+conky --config /home/burchettm/.conky/conkyrc1
   if pidof $SERVICE > /dev/null
   then
   echo "$SERVICE started ..."

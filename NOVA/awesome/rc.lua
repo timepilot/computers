@@ -13,12 +13,11 @@ require("vicious")			-- Dynamic Widget Library
 require("lib/cal")				-- Calendar Library / Widget
 
 -- -- APP AUTOSTART -- --
-awful.util.spawn_with_shell("conky")
---awful.util.spawn_with_shell("conky --config /home/burchettm/.conky/conkyrc2")
+awful.util.spawn_with_shell("/home/burchettm/.config/awesome/scripts/conky")
 awful.util.spawn_with_shell("dropboxd")
 awful.util.spawn_with_shell("mpd")
-awful.util.spawn_with_shell("/usr/lib/vino/vino-server --sm-disable")
---awful.util.spawn_with_shell("synergys -c /home/burchettm/.quicksynergy/synergy.conf")
+awful.util.spawn_with_shell("/home/burchettm/.config/awesome/scripts/x11vnc")
+--awful.util.spawn_with_shell("/home/burchettm/.config/awesome/scripts/synergys")
 awful.util.spawn_with_shell("/usr/bin/numlockx")
 awful.util.spawn_with_shell("xscreensaver -nosplash")
 awful.util.spawn_with_shell("wmname LG3D")
