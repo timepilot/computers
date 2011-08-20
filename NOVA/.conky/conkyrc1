@@ -27,10 +27,10 @@
 double_buffer yes
 
 alignment top_left
-background no
+background yes
 border_width 1
 cpu_avg_samples 2
-default_color black
+default_color white
 default_outline_color white
 default_shade_color white
 draw_borders no
@@ -79,7 +79,7 @@ ${font BankGothic Md Bt :bold 10}Net:$hr$font
  Ext: ${execi 3600 wget -O - http://ip.tupeux.com | tail}
  Up: ${upspeed eth0} - Down: ${downspeed eth0}
 ${font BankGothic Md Bt :bold 10}MPD:$hr$font
- ${font BankGothic Md Bt :size=12}$mpd_title$font
+ $mpd_title$font
  $mpd_artist
  $mpd_album
  $mpd_status $mpd_elapsed/$mpd_length
