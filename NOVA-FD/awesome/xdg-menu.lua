@@ -1,6 +1,8 @@
  menu98edb85b00d9527ad5acebe451b3fae6 = {     {"Archive Manager", "file-roller "},
      {"Disk Utility", "palimpsest"},
+     {"File Manager", "pcmanfm "},
      {"Image Viewer", "gpicview "},
+     {"LXTerminal", "lxterminal"},
      {"Leafpad", "leafpad "},
      {"gVim", "gvim "},
  }
@@ -38,6 +40,7 @@
      {"TeamSpeak 3", "/usr/bin/teamspeak3"},
      {"Thunderbird", "thunderbird "},
      {"Turpial", "turpial"},
+     {"Tweetdeck", "adobe-air /opt/tweetdeck/tweetdeck.air"},
      {"Wicd", "/usr/bin/wicd-client"},
      {"aMSN", "amsn"},
      {"emesene", "emesene"},
@@ -62,6 +65,7 @@
  menuee69799670a33f75d45c57d1d1cd0ab3 = {     {"Avahi Zeroconf Browser", "/usr/bin/avahi-discover"},
      {"Bulk Rename", "/usr/lib/Thunar/ThunarBulkRename "},
      {"Manage Printing", "/usr/bin/xdg-open http://localhost:631/"},
+     {"Task Manager", "lxtask"},
      {"Terminal", "Terminal"},
      {"Thunar File Manager", "Thunar "},
  }
